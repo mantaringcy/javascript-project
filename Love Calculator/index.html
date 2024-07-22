@@ -7,19 +7,18 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-
 </head>
 <body>
     <div class="flex items-center justify-center flex-col h-screen">
             
-        <div class="love-calculator flex items-center justify-center flex-col border border-gray-400 rounded-lg w-1/4 p-5">
-            <h1 class="text-xl bold font-bold m-2">Love Calculator</h1>
+        <div class="love-calculator flex items-center justify-evenly flex-col border border-gray-400 rounded-lg py-10 shadow-lg bg-gray-800" style="width: 420px !important;">
+            <h1 class="text-2xl italic font-black m-2 text-rose-600" style="-webkit-text-stroke: .5px whitesmoke;">Love Calculator</h1>
 
             <label class="form-control w-full max-w-xs">
                 <div class="label">
                     <span class="label-text">Your name</span>
                 </div>
-                <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" id="name1" />
+                <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs mb-2" id="name1" />
             </label>
 
             <label class="form-control w-full max-w-xs mb-4">
@@ -29,7 +28,7 @@
                 <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" id="name2" />
             </label>
 
-            <button class="btn mb-2" onclick="calculateLove()">
+            <button class="btn mb-3 bg-rose-600 text-white" onclick="calculateLove()">
                 Calculate
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +44,7 @@
                 </svg>
             </button>
 
-            <div id="result">
+            <div id="result" class="text-rose-500 m-0 p-0" style="text-shadow:1px 1px 10px rgb(244,63,94)">
                 <!-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, maxime? -->
             </div>
 
