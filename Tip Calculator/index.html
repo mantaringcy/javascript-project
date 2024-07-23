@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<style>
+    @media (min-width: 400px) { 
+        .card {
+            width: 320px;
+        }
+    }
+</style>
+<body class="container bg-dark bg-gradient d-flex align-items-center vh-100">
+
+
+    <div class="container text-center">
+        
+        <div class="card mx-auto border-0 shadow-sm d-flex">
+            <div class="card-body p-1">
+                <h4 class="bg-danger rounded text-white py-1 fw-bold">Tip Calculator</h4>
+
+                <div class="text-start mb-1 px-2">
+                    <label for="bill-amount" class="form-label m-0">Bill Amount:</label>
+                    <input type="number" class="form-control" id="bill-amount" placeholder="Enter the bill amount">
+                </div>
+
+                <div class="text-start mb-1 px-2">
+                    <label for="service-rating" class="form-label m-0">Service Rating:</label>
+                    <select class="form-select" id="service-rating">
+                        <option value="0" disabled selected>Choose your rating</option>
+                        <option value="1">Poor</option>
+                        <option value="2">Average</option>
+                        <option value="3">Good</option>
+                        <option value="4">Excellent</option>
+                    </select>
+                </div>
+
+                <div class="text-start mb-1 px-2">
+                    <label for="number-of-people" class="form-label m-0">Number of People:</label>
+                    <input type="number" class="form-control" id="number-of-people" placeholder="Enter the number of people">
+                </div>
+
+                <div class="text-start mb-1 px-2">
+                    <label for="meal-type" class="form-label m-0">Meal Type:</label>
+                    <select class="form-select" id="meal-type">
+                        <option value="0" selected disabled>Choose...</option>
+                        <option value="1">Breakfast</option>
+                        <option value="2">Lunch</option>
+                        <option value="3">Dinner</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="button-container d-flex p-1 justify-content-between gap-3">
+                <button class="btn btn-secondary w-75" id="clearBtn" onclick="clearInput()">Clear</button>
+                <button class="btn btn-danger w-100" id="calculateBtn">Calculate</button>
+            </div>
+
+            <div id="result" class="rounded m-1 p-1 border border-danger bg-danger-subtle fst-italic d-none">
+                <p class="m-0" id="tipResult">Tip: ₱100</p>
+                <p class="m-0" id="amountResult">Total Amount: ₱100</p>
+                <p class="m-0" id="personResult">Amount per Person: ₱100</p>
+            </div>
+            
+        </div>
+    
+</div>
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
